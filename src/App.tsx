@@ -6,11 +6,13 @@ const App = () => {
   return (
     <Router>
       <Header />
-      <Routes>
-        <Route element={<Home />} path="/" />
-        <Route element={<About />} path="/about" />
-        <Route element={<NotFound />} path="*" />
-      </Routes>
+      <main className="container">
+        <Routes>
+          <Route element={<Home />} path="/" />
+          <Route element={<About />} path="/about" />
+          <Route element={<NotFound />} path="*" />
+        </Routes>
+      </main>
       <Footer />
     </Router>
   )
