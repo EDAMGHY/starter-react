@@ -1,26 +1,18 @@
-import { Checkbox, Input } from "@/ui"
-import { useState } from "react"
+import { Home, About, NotFound } from "@/pages"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import { Footer, Header } from "@/layout"
 
 const App = () => {
-  const [checked, setChecked] = useState(false)
   return (
-    <div>
-      <h1>Input</h1>
-      <div className="p-4 flex flex-wrap gap-4">
-        <Input name="Name" placeholder={"Enter Name"} />
-        <Input name="Name" placeholder={"Enter Name"} variant="transparent" />
-        <Input name="Name" placeholder={"Enter Name"} variant="underline" />
-        <Checkbox
-          checked={checked}
-          setChecked={val => {
-            setChecked(val.target?.checked)
-            console.log("val", val.target?.checked)
-          }}
-          label={"Gender"}
-          variant="default"
-        />
-      </div>
-    </div>
+    <Router>
+      <Header />
+      <Routes>
+        <Route element={<Home />} path="/" />
+        <Route element={<About />} path="/about" />
+        <Route element={<NotFound />} path="*" />
+      </Routes>
+      <Footer />
+    </Router>
   )
 }
 

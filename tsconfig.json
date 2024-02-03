@@ -23,6 +23,7 @@
       "@/app/*": ["src/app/*"],
       "@/utils": ["src/utils"],
       "@/types": ["src/types"],
+      "@/pages": ["src/pages"],
       "@/ui": ["src/app/elements"],
       "@/themes": ["src/app/elements/theme.ts"],
       "@/layout": ["src/app/layout"],

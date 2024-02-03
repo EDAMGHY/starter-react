@@ -16,6 +16,7 @@ export default defineConfig({
       "@/ui": resolve(__dirname, "./src/app/elements"),
       "@/layout": resolve(__dirname, "./src/app/layout"),
       "@/redux": resolve(__dirname, "./src/app/redux"),
+      "@/pages": resolve(__dirname, "./src/pages"),
       "@/features": resolve(__dirname, "./src/features"),
       "@/app": resolve(__dirname, "./src/app"),
       "@/types": resolve(__dirname, "./src/types"),
