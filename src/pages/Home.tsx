@@ -1,3 +1,9 @@
+import { Text } from "@/ui"
+
 export const Home = () => {
-  return <div>App</div>
+  return (
+    <div>
+      <Text>This is a text</Text>
+    </div>
+  )
 }

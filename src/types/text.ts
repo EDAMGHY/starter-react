@@ -4,6 +4,6 @@ import { ReactNode } from "react"
 export interface IText {
   variant?: keyof typeof text
   children: ReactNode
-  as?: string
+  as?: keyof JSX.IntrinsicElements
   className?: string
 }
