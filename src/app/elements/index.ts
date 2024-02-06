@@ -1,5 +1,7 @@
 export * from "./button/Button"
 export * from "./link/Link"
+export * from "./heading/Heading"
+export * from "./text/Text"
 export * from "./form-items/input/Input"
 export * from "./form-items/input-button/InputButton"
 export * from "./form-items/select/Select"
