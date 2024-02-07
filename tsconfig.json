@@ -21,6 +21,7 @@
       "@/*": ["src/*"],
       "@/features/*": ["src/features/*"],
       "@/app/*": ["src/app/*"],
+      "@/shared": ["src/app/shared"],
       "@/utils": ["src/utils"],
       "@/types": ["src/types"],
       "@/pages": ["src/pages"],

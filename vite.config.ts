@@ -15,6 +15,7 @@ export default defineConfig({
       "@/*": resolve(__dirname, "./src"),
       "@/ui": resolve(__dirname, "./src/app/elements"),
       "@/layout": resolve(__dirname, "./src/app/layout"),
+      "@/shared": resolve(__dirname, "./src/app/shared"),
       "@/redux": resolve(__dirname, "./src/app/redux"),
       "@/pages": resolve(__dirname, "./src/pages"),
       "@/features": resolve(__dirname, "./src/features"),
