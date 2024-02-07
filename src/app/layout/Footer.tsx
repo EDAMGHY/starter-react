@@ -1,31 +1,34 @@
-import { menus } from "@/data"
+import { socials } from "@/data"
 import { Link } from "react-router-dom"
+import { Logo } from "@/shared"
 
 export const Footer = () => {
   return (
-    <footer className="bg-gray-700 text-gray-300 py-4">
+    <footer className="bg-primary text-secondary py-4">
       <div className="container space-y-5">
         <div className="flex justify-between items-center">
           <Link to={"/"}>
-            <h1 className="text-3xl font-bold">Logo</h1>
+            <Logo />
           </Link>
 
-          <ul className="flex gap-5 flex-wrap">
-            {menus.map(menu => (
-              <li key={menu?.id}>
+          <ul className="flex gap-6 flex-wrap">
+            {socials.map(social => (
+              <li key={social?.id}>
                 <Link
-                  className={`relative inline-flex text-base  hover:underline`}
-                  to={menu.path}
+                  target="_blank"
+                  className={`relative rounded transition-all duration-300 hover:bg-secondary hover:text-primary p-2 inline-flex text-base  hover:underline`}
+                  to={social.path}
                 >
-                  {menu.name}
+                  <social.icon className="w-5 h-5" />
                 </Link>
               </li>
             ))}
           </ul>
         </div>
-        <hr className="text-gray-300" />
-        <p className="text-center font-gloria text-base uppercase">
-          All Right reserved &copy; {new Date().getFullYear()}
+        <hr className="text-secondary" />
+        <p className="text-center font-gloria text-base">
+          Copyright © {new Date().getFullYear()} THE BLOGGER, All Rights
+          Reserved.
         </p>
       </div>
     </footer>
