@@ -2,6 +2,7 @@ import { inputButton } from "./theme"
 import { kebabCase } from "lodash"
 import clsx from "clsx"
 import { IInputButton } from "@/types"
+import { FiSearch } from "react-icons/fi"
 
 export const InputButton = ({
   variant = "default",
@@ -12,7 +13,7 @@ export const InputButton = ({
   errorMessage,
   disabled = false,
   buttonContent,
-  icon,
+  icon = <FiSearch />,
   iconRight = false,
   className,
   ...rest

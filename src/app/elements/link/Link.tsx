@@ -1,11 +1,10 @@
 import { Link as RouterLink } from "react-router-dom"
-import PropTypes from "prop-types"
 import { forwardRef } from "react"
 import { link } from "./theme"
 import clsx from "clsx"
 import { ILink } from "@/types"
 
-const Link = forwardRef(
+export const Link = forwardRef(
   (
     {
       href = "#.",
@@ -35,11 +34,3 @@ const Link = forwardRef(
     )
   },
 )
-
-Link.propTypes = {
-  children: PropTypes.node.isRequired,
-  className: PropTypes.string,
-  href: PropTypes.string.isRequired,
-}
-
-export { Link }

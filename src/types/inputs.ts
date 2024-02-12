@@ -1,4 +1,4 @@
-import { ChangeEvent } from "react"
+import { ChangeEvent, ReactNode } from "react"
 
 export interface IInput {
   variant?: "default" | "underline" | "transparent"
@@ -31,8 +31,8 @@ export interface ICheckbox {
 }
 
 export interface IInputButton {
-  variant: "default" | "underline" | "transparent"
-  type:
+  variant?: "default" | "underline" | "transparent"
+  type?:
     | "text"
     | "email"
     | "password"
@@ -48,7 +48,7 @@ export interface IInputButton {
   className?: string | null
   disabled?: boolean
   buttonContent?: string | null
-  icon?: string | null
+  icon?: ReactNode | string | null
   iconRight?: boolean
 }
 

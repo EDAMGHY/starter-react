@@ -1,10 +1,13 @@
 import { socials } from "@/data"
 import { Link } from "react-router-dom"
 import { Logo } from "@/shared"
+import clsx from "clsx"
 
-export const Footer = () => {
+export const Footer = ({ dashboard = false }) => {
   return (
-    <footer className="bg-primary text-secondary py-4">
+    <footer
+      className={clsx("bg-primary text-secondary py-4", dashboard && "rounded")}
+    >
       <div className="container space-y-5">
         <div className="flex justify-between items-center">
           <Link to={"/"}>

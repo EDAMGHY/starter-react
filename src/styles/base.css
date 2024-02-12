@@ -1,9 +1,20 @@
 @layer base {
   html {
-    @apply text-primary scroll-smooth;
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply text-primary bg-secondary;
   }
 
   .btn {
     @apply h-fit focus:outline-none transition-all ease-in-out duration-500 border-2 border-solid inline-flex justify-center gap-2 !rounded-md font-[400];
+  }
+
+  .sidebar-link span:first-child {
+    @apply text-secondary bg-transparent;
+  }
+  .sidebar-link.active span:first-child {
+    @apply text-primary bg-secondary;
   }
 }
