@@ -1,3 +1,5 @@
 export * from "./Footer"
 export * from "./Header"
 export * from "./HeaderDashboard"
+export * from "./Sidebar"
+export * from "./ThemeToggle"
