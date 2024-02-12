@@ -18,6 +18,8 @@ export default defineConfig({
       "@/shared": resolve(__dirname, "./src/app/shared"),
       "@/redux": resolve(__dirname, "./src/app/redux"),
       "@/pages": resolve(__dirname, "./src/pages"),
+      "@/context": resolve(__dirname, "./src/context"),
+      "@/hooks": resolve(__dirname, "./src/hooks"),
       "@/features": resolve(__dirname, "./src/features"),
       "@/app": resolve(__dirname, "./src/app"),
       "@/types": resolve(__dirname, "./src/types"),

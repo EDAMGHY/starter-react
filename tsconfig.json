@@ -25,6 +25,8 @@
       "@/utils": ["src/utils"],
       "@/types": ["src/types"],
       "@/pages": ["src/pages"],
+      "@/context": ["src/context"],
+      "@/hooks": ["src/hooks"],
       "@/ui": ["src/app/elements"],
       "@/themes": ["src/app/elements/theme.ts"],
       "@/layout": ["src/app/layout"],
