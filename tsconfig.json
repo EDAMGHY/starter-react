@@ -28,6 +28,7 @@
       "@/context": ["src/context"],
       "@/hooks": ["src/hooks"],
       "@/ui": ["src/app/elements"],
+      "@/components": ["src/app/components"],
       "@/themes": ["src/app/elements/theme.ts"],
       "@/layout": ["src/app/layout"],
       "@/redux/*": ["src/app/redux/*"],
