@@ -4,7 +4,7 @@ import { Logo } from "@/shared"
 
 export const Header = () => {
   return (
-    <nav className="sticky z-[100] left-0 top-0 w-full py-5 text-primary">
+    <nav className="sticky bg-secondary z-[100] left-0 top-0 w-full py-5 text-primary">
       <div className="container flex w-full items-center justify-between">
         <Link to={"/"}>
           <Logo />

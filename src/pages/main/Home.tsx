@@ -1,9 +1,9 @@
-import { Text } from "@/ui"
+import { FeaturedBlogs } from "@/components"
 
 export const Home = () => {
   return (
-    <div>
-      <Text>This is a text</Text>
-    </div>
+    <>
+      <FeaturedBlogs />
+    </>
   )
 }

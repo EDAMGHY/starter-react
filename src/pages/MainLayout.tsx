@@ -6,8 +6,9 @@ export const MainLayout = () => {
     <>
       <Header />
       <section className="container">
-        <h1>MainLayout</h1>
-        <Outlet />
+        <main className="py-5">
+          <Outlet />
+        </main>
       </section>
       <Footer />
     </>

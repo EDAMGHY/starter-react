@@ -28,7 +28,7 @@ export const Footer = ({ dashboard = false }) => {
             ))}
           </ul>
         </div>
-        <hr className="text-secondary" />
+        <hr className="border-secondary" />
         <p className="text-center font-gloria text-base">
           Copyright © {new Date().getFullYear()} THE BLOGGER, All Rights
           Reserved.
