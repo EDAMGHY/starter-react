@@ -1,6 +1,7 @@
 export * from "./button/theme"
 export * from "./heading/theme"
 export * from "./text/theme"
+export * from "./badge/theme"
 export * from "./link/theme"
 export * from "./form-items/checkbox/theme"
 export * from "./form-items/input/theme"

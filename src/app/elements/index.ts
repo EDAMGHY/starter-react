@@ -1,5 +1,6 @@
 export * from "./button/Button"
 export * from "./link/Link"
+export * from "./badge/Badge"
 export * from "./heading/Heading"
 export * from "./text/Text"
 export * from "./form-items/input/Input"
