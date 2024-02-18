@@ -26,7 +26,6 @@ const App = () => {
   return (
     <ThemeSwitcherProvider>
       <Router>
-        <ThemeToggle />
         <Routes>
           <Route element={<MainLayout />} path="/">
             <Route element={<Home />} index />
@@ -49,6 +48,7 @@ const App = () => {
             <Route element={<DashboardNotFound />} path="*" />
           </Route>
         </Routes>
+        <ThemeToggle />
       </Router>
     </ThemeSwitcherProvider>
   )

@@ -7,17 +7,23 @@ export const ThemeToggle = () => {
   return (
     <div
       className={clsx(
-        "fixed z-[200] -top-10 -right-10 rounded-full w-20 h-20 bg-primary text-secondary flex flex-col gap-6 justify-center items-center transition-all duration-500",
-        isDark ? "rotate-45" : "rotate-[225deg]",
+        "fixed z-[200] px-2 py-1 top-1/2 rotate-90 -translate-y-1/2 overflow-hidden -right-5 rounded-full bg-primary text-secondary",
       )}
     >
-      <button onClick={addDarkTheme} className="">
-        <FiMoon className="w-5 h-5" />
-      </button>
+      <div
+        className={clsx(
+          "rounded-full py-2 flex flex-col gap-6 justify-center items-center transition-all duration-500",
+          isDark ? "rotate-30" : "rotate-[180deg]",
+        )}
+      >
+        <button onClick={addDarkTheme} className="">
+          <FiMoon className={clsx("w-5 h-5", isDark ? "" : "-rotate-180")} />
+        </button>
 
-      <button onClick={removeDarkTheme} className="">
-        <FiSun className="w-5 h-5" />
-      </button>
+        <button onClick={removeDarkTheme} className="">
+          <FiSun className="w-5 h-5" />
+        </button>
+      </div>
     </div>
   )
 }
