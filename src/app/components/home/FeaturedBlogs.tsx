@@ -1,12 +1,10 @@
-import { Header, MainCard } from "@/shared"
+import { MainCard, Section } from "@/shared"
 
 export const FeaturedBlogs = () => {
   return (
-    <section className="space-y-6">
-      <Header title="Featured" />
+    <Section title="Featured" className="space-y-6">
       <MainCard {...data} />
-      FeatureBlogs
-    </section>
+    </Section>
   )
 }
 
