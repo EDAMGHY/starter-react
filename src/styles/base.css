@@ -8,7 +8,7 @@
   }
 
   .btn {
-    @apply h-fit focus:outline-none transition-all ease-in-out duration-500 border-2 border-solid inline-flex justify-center gap-2 !rounded-md font-[400];
+    @apply h-fit focus:outline-none transition-all ease-in-out duration-500 border-2 border-solid inline-flex gap-2 !rounded-md font-[400] items-center;
   }
 
   .sidebar-link span:first-child {

@@ -22,7 +22,7 @@ export const Link = forwardRef(
       <RouterLink
         to={href}
         ref={ref}
-        rel={target === "_blank" ? "noopener" : null}
+        rel={target === "_blank" ? "noopener" : undefined}
         target={target}
         className={clsx(className, link.base, link?.variants?.[variant])}
         {...rest}

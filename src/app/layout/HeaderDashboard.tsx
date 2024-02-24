@@ -1,7 +1,8 @@
+import { useCloseOnEscAndClickOutside } from "@/hooks"
 import { InputButton, Link } from "@/ui"
 import { formatDate } from "@/utils"
 import { Transition } from "@headlessui/react"
-import { useEffect, useRef, useState } from "react"
+import { useState } from "react"
 import { FiChevronDown } from "react-icons/fi"
 
 export const HeaderDashboard = () => {
@@ -29,20 +30,9 @@ const TodayDate = () => {
 
 const UserInfo = () => {
   const [show, setShow] = useState<boolean>(false)
-  const avatarRef = useRef(null)
 
-  useEffect(() => {
-    const handleOutsideClick = (e: Event) => {
-      if (avatarRef.current && !avatarRef.current.contains(e.target)) {
-        setShow(false)
-      }
-    }
-
-    document.addEventListener("click", handleOutsideClick, true)
-    return () => {
-      document.removeEventListener("click", handleOutsideClick, true)
-    }
-  }, [])
+  const closeSelect = () => setShow(false)
+  const avatarRef = useCloseOnEscAndClickOutside(closeSelect)
 
   return (
     <div ref={avatarRef} className="flex gap-4">

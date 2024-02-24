@@ -10,7 +10,7 @@ export interface IButton {
   pill?: boolean
   outline?: boolean
   disabled?: boolean
-  icon?: string | null
+  icon?: ReactNode
   iconRight?: boolean | null
   href?: string | null
   target?: string | null

@@ -1,8 +1,8 @@
 import { Heading, Text } from "@/ui"
 import { Section } from "@/shared"
-import { FiPieChart, FiBarChart2 } from "react-icons/fi"
-import { IconType } from "react-icons"
 import { createElement } from "react"
+import { IPopularCategory } from "./types"
+import { popular_categories } from "./data"
 
 export const PopularCategories = () => {
   return (
@@ -29,36 +29,3 @@ const PopularCategoryCard = ({
     </div>
   )
 }
-
-interface IPopularCategory {
-  icon?: IconType
-  title?: string
-  description?: string
-}
-
-const popular_categories: IPopularCategory[] = [
-  {
-    icon: FiPieChart,
-    title: "Sports",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui dolorum animi sapiente voluptate voluptates.",
-  },
-  {
-    icon: FiBarChart2,
-    title: "Sports",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui dolorum animi sapiente voluptate voluptates.",
-  },
-  {
-    icon: FiPieChart,
-    title: "Sports",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui dolorum animi sapiente voluptate voluptates.",
-  },
-  {
-    icon: FiBarChart2,
-    title: "Sports",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui dolorum animi sapiente voluptate voluptates.",
-  },
-]

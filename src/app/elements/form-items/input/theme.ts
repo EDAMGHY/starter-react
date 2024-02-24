@@ -5,7 +5,7 @@ export const input = {
     input_wrapper: {
       wrapper: "flex flex-col gap-2 w-full",
       input: {
-        base: "w-full bg-secondary text-primary border-2 border-primary px-3 py-2 transition-all duration-300 focus:outline-primary outline focus:outline-offset-[2.5px] outline-offset-0 outline-2 outline-transparent  placeholder:capitalize placeholder:font-light placeholder:text-primary",
+        base: "w-full bg-secondary text-primary border-2 border-primary px-3 py-2.5 transition-all duration-300 focus:outline-primary outline focus:outline-offset-[2.5px] outline-offset-0 outline-2 outline-transparent  placeholder:capitalize placeholder:font-light placeholder:text-primary",
         disabled: "!bg-black/20 cursor-not-allowed",
         errorMessage:
           "absolute -bottom-5 left-0 text-error text-xs font-normal inline-block",

@@ -4,10 +4,10 @@ export const button = {
   pill: "!rounded-full",
   size: {
     small: "text-sm px-4 py-2",
-    normal: "text-base  px-6 py-2.5",
+    normal: "text-base  px-6 py-3",
     large: "text-lg px-8 py-4",
     xlarge: "text-xl  px-10 py-5",
-    icon: "px-4 py-4",
+    icon: "px-3 py-3",
   },
   variants: {
     custom: "",

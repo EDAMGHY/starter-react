@@ -17,6 +17,7 @@ import {
   MyBlogs,
   Profile,
   Users,
+  Blogs,
 } from "@/pages"
 import { ThemeToggle } from "@/layout"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
@@ -29,6 +30,7 @@ const App = () => {
         <Routes>
           <Route element={<MainLayout />} path="/">
             <Route element={<Home />} index />
+            <Route element={<Blogs />} path="blogs" />
             <Route element={<About />} path="about" />
             <Route element={<MainNotFound />} path="*" />
           </Route>

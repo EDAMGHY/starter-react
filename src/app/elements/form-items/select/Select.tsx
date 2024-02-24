@@ -1,9 +1,10 @@
 import clsx from "clsx"
-import { forwardRef, useEffect, Ref, useRef, useState } from "react"
+import { forwardRef, Ref, useState } from "react"
 import { FiChevronDown } from "react-icons/fi"
 import { Transition } from "@headlessui/react"
 import { ISelect } from "@/types"
 import { select } from "./theme"
+import { useCloseOnEscAndClickOutside } from "@/hooks"
 
 const listItems = [
   {
@@ -46,8 +47,6 @@ export const Select = forwardRef(
       ...list,
     ]
 
-    const selectRef = useRef<HTMLDivElement>(null)
-
     const [showSelect, setShowSelect] = useState(false)
 
     const toggleSelect = () => {
@@ -62,19 +61,7 @@ export const Select = forwardRef(
     const closeSelect = () => {
       setShowSelect(false)
     }
-
-    useEffect(() => {
-      const handleOutsideClick = (e: Event) => {
-        if (selectRef.current && !selectRef.current.contains(e.target)) {
-          closeSelect()
-        }
-      }
-
-      document.addEventListener("click", handleOutsideClick, true)
-      return () => {
-        document.removeEventListener("click", handleOutsideClick, true)
-      }
-    }, [])
+    const selectRef = useCloseOnEscAndClickOutside(closeSelect)
 
     return (
       <div ref={selectRef} className={clsx(select?.[variant].field, className)}>

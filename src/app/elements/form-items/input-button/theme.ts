@@ -9,7 +9,7 @@ export const inputButton = {
       button:
         "bg-primary text-secondary px-3 border-y-2 border-r-2 border-primary inline-flex gap-2 items-center justify-center",
       input: {
-        base: "w-full bg-secondary text-primary border-2 border-primary px-3 py-2 focus:outline-0 placeholder:capitalize placeholder:font-light placeholder:text-primary",
+        base: "w-full bg-secondary text-primary border-2 border-primary px-3 py-2.5 focus:outline-0 placeholder:capitalize placeholder:font-light placeholder:text-primary",
         disabled: "!bg-black/20 cursor-not-allowed",
         errorMessage:
           "absolute -bottom-5 left-0 text-error text-xs font-normal inline-block",

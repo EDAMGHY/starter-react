@@ -1,14 +1,10 @@
-import { Heading, Text } from "@/ui"
+import { BlogsFilter, BlogsListing } from "@/components"
 
 export const Blogs = () => {
   return (
-    <div>
-      <Heading>Blogs</Heading>
-      <Text>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum iste
-        voluptate ut provident veniam perspiciatis praesentium saepe fuga velit
-        est!
-      </Text>
-    </div>
+    <section className="py-8 space-y-16">
+      <BlogsFilter />
+      <BlogsListing />
+    </section>
   )
 }

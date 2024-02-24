@@ -1,9 +1,12 @@
+import { ReactNode } from "react"
+
 interface IHeader {
   title: string
   subtitle?: string
+  children?: ReactNode
 }
 
-export const Header = ({ title, subtitle }: IHeader) => {
+export const Header = ({ title, subtitle, children }: IHeader) => {
   return (
     <div className="font-gloria space-y-4">
       <div className="border-t-2 border-primary flex justify-normal items-center w-full">
@@ -12,6 +15,7 @@ export const Header = ({ title, subtitle }: IHeader) => {
         </div>
       </div>
       {subtitle && <h3 className="text-[32px] leading-[42px]">{subtitle}</h3>}
+      {children}
     </div>
   )
 }

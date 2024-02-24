@@ -15,13 +15,13 @@ export const menus = [
   },
   {
     id: uuidv4(),
-    path: "/about",
-    name: "About",
+    path: "/blogs",
+    name: "Blogs",
   },
   {
     id: uuidv4(),
-    path: "/contact",
-    name: "Contact",
+    path: "/about",
+    name: "About",
   },
   {
     id: uuidv4(),
