@@ -5,19 +5,19 @@ export const useCloseOnEscAndClickOutside = (
 ): React.RefObject<HTMLDivElement> => {
   const ref = useRef<HTMLDivElement>(null)
 
-  const handleClickOutside = (event: MouseEvent) => {
-    if (ref.current && !ref.current.contains(event.target as Node)) {
-      callback()
-    }
-  }
-
-  const handleKeyDown = (event: KeyboardEvent) => {
-    if (event.key === "Escape") {
-      callback()
-    }
-  }
-
   useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (ref.current && !ref.current.contains(event.target as Node)) {
+        callback()
+      }
+    }
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        callback()
+      }
+    }
+
     document.addEventListener("mousedown", handleClickOutside)
     document.addEventListener("keydown", handleKeyDown)
 
@@ -25,7 +25,7 @@ export const useCloseOnEscAndClickOutside = (
       document.removeEventListener("mousedown", handleClickOutside)
       document.removeEventListener("keydown", handleKeyDown)
     }
-  }, [handleClickOutside, handleKeyDown])
+  }, [callback, ref])
 
   return ref
 }

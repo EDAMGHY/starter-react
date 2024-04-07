@@ -8,6 +8,7 @@ export const badge = {
     },
     icon: "mr-2 w-3 h-3",
     color: "text-secondary bg-primary",
+    inverseColor: "text-primary bg-secondary",
   },
 
   ribbon: {
@@ -20,6 +21,7 @@ export const badge = {
     },
     icon: "mr-2 w-3 h-3",
     color: "text-white bg-blue-500",
+    inverseColor: "text-blue-500 bg-white",
   },
 
   inline: {
@@ -31,5 +33,6 @@ export const badge = {
     },
     icon: "mr-2 w-3 h-3",
     color: "text-primary-600 hover:text-primary-300",
+    inverseColor: "text-primary-300 hover:text-primary-600",
   },
 }

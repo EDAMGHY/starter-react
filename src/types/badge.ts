@@ -5,6 +5,7 @@ export interface IBadge {
   text: string
   href?: string
   className?: string
+  inverse?: boolean
   variant?: keyof typeof badge
   size?: "xsmall" | "small" | "normal"
 }

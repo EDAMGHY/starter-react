@@ -44,10 +44,10 @@ export const Header = () => {
         </button>
         <Transition
           show={openMenu}
-          enter="transition ease-out duration-500"
+          enter="transition ease-out duration-300"
           enterFrom="transform opacity-0 -translate-x-full"
           enterTo="transform opacity-100 translate-x-0"
-          leave="transition ease-in duration-500"
+          leave="transition ease-in duration-300"
           leaveFrom="transform opacity-100 translate-x-0"
           leaveTo="transform opacity-0 -translate-x-full"
           className="fixed top-0 flex items-center justify-start flex-col gap-10 left-0 w-full h-screen text-secondary bg-primary z-[999] px-5 py-10"

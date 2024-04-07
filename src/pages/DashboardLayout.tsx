@@ -8,7 +8,6 @@ export const DashboardLayout = () => {
         <Sidebar />
         <section className="w-full">
           <HeaderDashboard />
-          <h1>DashboardLayout</h1>
           <Outlet />
           <Footer dashboard />
         </section>

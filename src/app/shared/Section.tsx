@@ -2,16 +2,30 @@ import clsx from "clsx"
 import { Header } from "./Header"
 import { ReactNode } from "react"
 
-export interface ISection {
+export interface IDashboardSection {
   title?: string | undefined
   className?: string
   children: ReactNode
+  topSection?: ReactNode
 }
 
-export const Section = ({ children, title, className }: ISection) => {
+export const Section = ({
+  children,
+  title,
+  topSection,
+  className,
+}: IDashboardSection) => {
   return (
     <section className={clsx("section", className)}>
-      {title && <Header title={title} />}
+      {topSection ? (
+        <div>
+          {title && <Header title={title} />}
+          {topSection}
+        </div>
+      ) : (
+        <>{title && <Header title={title} />}</>
+      )}
+
       {children}
     </section>
   )

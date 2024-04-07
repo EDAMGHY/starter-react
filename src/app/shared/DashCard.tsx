@@ -1,9 +1,9 @@
-import { Heading, Badge, Text, Link } from "@/ui"
+import { Heading, Text, Link, Badge } from "@/ui"
 import clsx from "clsx"
 import { truncate } from "lodash"
 import { FiChevronsRight } from "react-icons/fi"
 
-interface IMainCard {
+interface IDashCard {
   title?: string
   image?: string
   author?: {
@@ -15,9 +15,10 @@ interface IMainCard {
   excerpt?: string
   url?: string
   reverse?: boolean
+  rounded?: boolean
 }
 
-export const MainCard = ({
+export const DashCard = ({
   author,
   category,
   createdAt,
@@ -26,41 +27,48 @@ export const MainCard = ({
   title,
   url,
   reverse = false,
-}: IMainCard) => {
+  rounded = false,
+}: IDashCard) => {
   return (
     <div
       className={clsx(
-        "w-full flex gap-5 xl:gap-10 justify-between items-center",
+        "w-full flex gap-5 justify-start items-start",
         reverse ? "lg:flex-row-reverse flex-col" : "flex-col lg:flex-row",
       )}
     >
-      <CardImage image={image} reverse={reverse} />
+      <CardImage rounded={rounded} image={image} reverse={reverse} />
       <CardInfo {...{ author, category, createdAt, excerpt, title, url }} />
     </div>
   )
 }
 
 const CardInfo = ({
-  author,
+  excerpt,
   category,
   createdAt,
-  excerpt,
   title,
   url,
-}: IMainCard) => {
+  author,
+}: IDashCard) => {
   return (
-    <div className="w-full lg:w-1/2 space-y-8 ">
+    <div className="w-full space-y-2 ">
+      <div className="flex gap-4 items-center justify-between">
+        {author && <AuthorInfo {...author} />}
+        {createdAt && (
+          <Text className="text-sm underline font-thin">{createdAt}</Text>
+        )}
+        {category && <Badge inverse text={category} />}
+      </div>
       {title && (
-        <Heading level={2} gloria>
+        <Heading level={5} gloria>
           {title}
         </Heading>
       )}
-      <BlogInfo {...{ ...author, createdAt, category }} />
 
       {excerpt && (
-        <Text>
+        <Text className="text-sm">
           {truncate(excerpt, {
-            length: 400,
+            length: 100,
           })}
           {url && (
             <Link
@@ -81,51 +89,39 @@ const CardInfo = ({
   )
 }
 
-const BlogInfo = ({
-  name,
-  avatar,
-  createdAt,
-  category,
-}: {
-  name?: string
-  avatar?: string
-  createdAt?: string
-  category?: string
-}) => {
-  return (
-    <div className="flex gap-4 justify-between items-center">
-      <div className="flex gap-4 items-center justify-start">
-        <img
-          src={avatar}
-          alt={name}
-          className="rounded-full w-[55px] h-[55px] object-cover"
-        />
-        <div className="space-y-2">
-          {name && <h4 className="text-lg leading-6 font-bold">{name}</h4>}
-          {createdAt && (
-            <span className="inline-block text-lg leading-6 font-light">
-              {createdAt}
-            </span>
-          )}
-        </div>
-      </div>
-
-      {category && <Badge text={category} />}
-    </div>
-  )
-}
-
 const CardImage = ({
   image,
   title,
+  rounded,
 }: {
   image?: string
   title?: string
   reverse?: boolean
+  rounded?: boolean
 }) => {
   return (
-    <div className="w-full lg:w-1/2 rounded-xl overflow-hidden aspect-square min-h-[250px] max-h-[400px]">
+    <div
+      className={clsx(
+        rounded ? "rounded-full" : "rounded-xl",
+        "shrink-0 size-[100px] overflow-hidden",
+      )}
+    >
       <img src={image} alt={title} className="w-full h-full object-cover" />
+    </div>
+  )
+}
+
+const AuthorInfo = ({ name, avatar }: { name?: string; avatar?: string }) => {
+  return (
+    <div className="flex gap-4 items-center justify-start">
+      {avatar && (
+        <img
+          src={avatar}
+          alt={name}
+          className="rounded-full size-[30px] object-cover"
+        />
+      )}
+      {name && <h4 className="text-base leading-5 font-bold">{name}</h4>}
     </div>
   )
 }

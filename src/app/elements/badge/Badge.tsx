@@ -9,6 +9,7 @@ export const Badge = ({
   variant = "default",
   size = "normal",
   className = "",
+  inverse = false,
 }: IBadge) => {
   const Component = href ? "a" : "span"
   return (
@@ -16,7 +17,7 @@ export const Badge = ({
       href={href}
       className={clsx(
         badge[variant].wrapper,
-        badge[variant].color,
+        inverse ? badge[variant].inverseColor : badge[variant].color,
         badge[variant].size[size],
         className,
       )}

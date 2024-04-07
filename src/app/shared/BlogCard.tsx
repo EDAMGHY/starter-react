@@ -16,6 +16,7 @@ interface IBlogCard {
   excerpt?: string
   url?: string
   reverse?: boolean
+  length?: number
 }
 
 export const BlogCard = ({
@@ -27,6 +28,7 @@ export const BlogCard = ({
   title,
   url,
   reverse = false,
+  length = 200,
 }: IBlogCard) => {
   return (
     <div className={clsx("space-y-4")}>
@@ -38,7 +40,7 @@ export const BlogCard = ({
       {excerpt && (
         <Text>
           {truncate(excerpt, {
-            length: 200,
+            length,
           })}
           {url && (
             <Link
