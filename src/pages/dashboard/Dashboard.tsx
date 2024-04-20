@@ -1,4 +1,10 @@
-import { Analytics, MostViewed, RecentBlogs } from "@/components"
+import {
+  Analytics,
+  MostViewed,
+  RecentBlogs,
+  RecentCategories,
+  RecentUsers,
+} from "@/components"
 
 export const Dashboard = () => {
   return (
@@ -7,6 +13,8 @@ export const Dashboard = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
         <MostViewed />
         <RecentBlogs />
+        <RecentCategories />
+        <RecentUsers />
       </div>
     </section>
   )

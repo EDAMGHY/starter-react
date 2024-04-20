@@ -42,7 +42,11 @@ const AnalyticCard = ({
       <div>
         {title && <Heading level={5}>{title}</Heading>}
         {number && (
-          <Text as="span" className="inline-block mt-2 font-bold text-4xl">
+          <Text
+            as="span"
+            variant="custom"
+            className="inline-block mt-2 font-bold text-4xl"
+          >
             {number}
           </Text>
         )}
